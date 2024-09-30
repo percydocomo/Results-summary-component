@@ -1,0 +1,235 @@
+/* ROOT */
+:root {
+  --primary-light-red: hsl(0, 100%, 67%);
+  --primary-light-red-alpha: hsl(0, 100%, 67%, 0.05);
+  --primary-orange-yellow: hsl(39, 100%, 56%);
+  --primary-orange-yellow-alpha: hsl(39, 100%, 56%, 0.05);
+  --primary-green-teal: hsl(166, 100%, 37%);
+  --primary-green-teal-alpha: hsl(166, 100%, 37%, 0.05);
+  --primary-cobalt-blue: hsl(234, 85%, 45%);
+  --primary-cobalt-blue-alpha: hsl(234, 85%, 45%, 0.05);
+
+  --gradients-light-slate-blue: hsl(252, 100%, 67%);
+  --gradients-light-royal-blue: hsl(241, 81%, 54%);
+  --gradients-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradients-persion-blue: hsla(241, 72%, 46%, 0);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(221, 100%, 96%);
+  --neutral-light-lavender: hsl(241, 100%, 89%);
+  --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERIC STYLES */
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: 21em;
+    margin: auto;
+}
+
+.result {
+    background-image: linear-gradient(var(--gradients-light-slate-blue), var(--gradients-light-royal-blue));
+    color: var(--neutral-white);
+    border-bottom-left-radius: 1.6em;
+    border-bottom-right-radius: 1.6em;
+    padding: 0 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result p {
+    font-size: 0.9em;
+    color: var(--neutral-light-lavender);
+    text-align: center;
+    font-weight: 700;
+}
+
+.result h4 {
+    color: var(--neutral-light-lavender);
+    margin-top: 1.25em;
+}
+
+.total-score {
+    background-image: linear-gradient(var(--gradients-violet-blue), var(--gradients-persion-blue));
+    width: 7.5em;
+    height: 7.5em;
+    border-radius: 50%;
+    margin-top: 1.5em;
+    margin-bottom: 1.55em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.total-score p {
+    opacity: 50%;
+}
+
+.user-score {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.result h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.34em;
+}
+
+.summary  {
+  padding: 1em;
+  color: var(--neutral-dark-gray-blue);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary p {
+   margin-top: 1.3em;
+   margin-bottom: 1.3em; 
+}
+
+.flex {
+    display: flex;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    padding: 1.05em;
+    border-radius: 0.5em;
+}
+
+img {
+    margin-right: 0.5em;
+}
+.score {
+    margin-left: auto;
+    color: var(--neutral-dark-gray-blue);
+    
+}
+
+.individual-max-score {
+    opacity: 70%;
+}
+
+.reaction {
+  color: var(--primary-light-red);
+  background-color: var(--primary-light-red-alpha);
+}
+
+.memory {
+    color: var(--primary-orange-yellow);
+    background-color: var(--primary-orange-yellow-alpha);
+}
+.verbal {
+    color: var(--primary-green-teal);
+    background-color: var(--primary-green-teal-alpha);
+}
+
+.visual {
+    color: var(--primary-cobalt-blue);
+    background-color: var(--primary-cobalt-blue-alpha);
+}
+
+button {
+    margin-top: 0.5em;
+    padding: 1em;
+    border-radius: 5em;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--neutral-white);
+    background-color: var(--neutral-dark-gray-blue);   
+}
+
+button:hover {
+    background-color: var(--gradients-light-royal-blue);
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 767px) {
+    .container {
+        width: 41em;
+        margin: 9em auto;
+        box-shadow: 1em 2em 2em var(--neutral-pale-blue);
+        display: flex;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .result {
+        border-radius: 1.5em;
+        width: 50%;
+    }
+
+    .result h4 {
+        font-size: 1.3em;
+        margin-top: 1.65em;
+    }
+
+    .total-score {
+        width: 11em;
+        height: 11em;
+        margin-top: 2em;
+        margin-bottom: 1.8em;
+    }
+
+    .result h3 {
+        font-size: 1.6em;
+        margin-bottom: 0.55em;
+    }
+
+    .user-score {
+        font-size: 4em;
+    }
+
+    .result p {
+        font-size: 1em;
+        margin-bottom: 0.9em;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+    }
+    .summary {
+        width: 50%;
+        padding: 0.37em 2em 0 2em;
+  
+    }
+
+    button {
+        margin-top: 1.37em;
+        margin-bottom: 2.5em;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 90%;
+    }  
+}
